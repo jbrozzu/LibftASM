@@ -7,9 +7,9 @@ NAME       = libfts.a
 
 FORMAT     = -f macho64
 
-CC         = ~/../../usr/local/Cellar/nasm/2.11.08/bin/nasm
+CC         = ~/.brew/Cellar/nasm/2.11.08/bin/nasm      #~/../../usr/local/Cellar/nasm/2.11.08/bin/nasm
 
-SRC        = minima.s ft_isdigit.s
+SRC        = ft_isdigit.s ft_isalpha.s ft_isalnum.s ft_isascii.s ft_isprint.s ft_tolower.s ft_toupper.s ft_strlen.s ft_bzero.s
 
 OBJ        = $(SRC:%.s=%.o)
 
@@ -34,11 +34,11 @@ $(NAME): $(OBJ)
 
 clean:
 	@echo "\033[33mCleaning libft asm!\033[0m"
-	@rm -f $(OBJ)
+	@rm -f $(OBJ) maintest.o
 
 fclean:
 	@echo "\033[31mFclean libft asm!\033[0m"
-	@rm -f $(NAME) $(OBJ)
+	@rm -f $(NAME) $(OBJ) a.out
 
 test: all
 	@gcc -Wall -Werror -Wextra -c maintest.c

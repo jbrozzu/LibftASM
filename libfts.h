@@ -26,11 +26,11 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 char	*ft_strdup(const char *s1);
 void	ft_cat(int fd);
-char	*ft_strcpy(char *dst, const char *src);
-void	ft_exit(int ret);
-void	ft_filezero(char *file);
-void	ft_log(char *file);
-void	*ft_memalloc(size_t n);
-void	ft_nebre(void);
+//char	*ft_strcpy(char *dst, const char *src);
+//void	ft_exit(int ret);
+//void	ft_filezero(char *file);
+//void	ft_log(char *file);
+//void	*ft_memalloc(size_t n);
+//void	ft_nebre(void);
 
 #endif

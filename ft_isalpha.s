@@ -1,20 +1,21 @@
 section .text
-	global start
 	global _ft_isalpha
-	global exit
-	global isalpha
-
-start:
-	call _ft_isdigit
-	ret
 
 _ft_isalpha:
 	mov	rax, 0				;initialize return --> 0
-	cmp	rdi, 48				;compare with 0
-	jl 	exit				;if strictly less than 0 --> exit
-	cmp	rdi, 57				;compare with 9
-	jg 	exit				;if strictly more than 9 --> exit
-	jmp isdigit
+	cmp	rdi, 65				;compare with 'A'
+	jb 	exit				;if strictly less than 'A' --> exit
+	cmp	rdi, 90				;compare with 'Z'
+	ja 	get_min				;if strictly more than 'Z' --> check_min
+	jmp isalpha
+	ret
+
+get_min:
+	cmp rdi, 97				;compare with 'a'
+	jb	exit				;if strictly less than 'a' --> exit
+	cmp rdi, 122			;compare with 'z'
+	ja	exit				;if strictly more than 'z' --> exit
+	jmp isalpha
 	ret
 
 isalpha:

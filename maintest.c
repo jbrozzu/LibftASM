@@ -5,21 +5,21 @@ HEADER
 
 #include "libfts.h"
 
-/*void 	check_alnum(void)
+void 	check_alnum(void)
 {
-	printf("[-] ALNUM [-]\n");
-	printf("[+] Test on %c, return = %d [+]\n", 'a', ft_isalnum('a'));
-	printf("[+] Test on %c, return = %d [+]\n", 'z', ft_isalnum('z'));
-	printf("[+] Test on %c, return = %d [+]\n", '*', ft_isalnum('*'));
-	printf("[+] Test on %c, return = %d [+]\n", 'Z', ft_isalnum('Z'));
-	printf("[+] Test on %c, return = %d [+]\n", 'A', ft_isalnum('A'));
-	printf("[+] Test on %c, return = %d [+]\n", '0', ft_isalnum('0'));
-	printf("[+] Test on %c, return = %d [+]\n", '9', ft_isalnum('9'));
-	printf("[+] Test on %c, return = %d [+]\n", '4', ft_isalnum('4'));
-	printf("[-] Test with NULL [-]\n");
-	printf("[+] Test return = %d [+]\n", ft_isalnum(0));
-	printf("[-] END OF ALNUM [-]\n");
-}  */
+	printf(" ----------------> ISALNUM <---------------- \n\n");
+	printf(" Is '%c' a number/character ? return = %d \n", 'a', ft_isalnum('a'));
+	printf(" Is '%c' a number/character ? return = %d \n", 'z', ft_isalnum('z'));
+	printf(" Is '%c' a number/character ? return = %d \n", '*', ft_isalnum('*'));
+	printf(" Is '%c' a number/character ? return = %d \n", 'Z', ft_isalnum('Z'));
+	printf(" Is '%c' a number/character ? return = %d \n", 'A', ft_isalnum('A'));
+	printf(" Is '%c' a number/character ? return = %d \n", '0', ft_isalnum('0'));
+	printf(" Is '%c' a number/character ? return = %d \n", '9', ft_isalnum('9'));
+	printf(" Is '%c' a number/character ? return = %d \n\n", '4', ft_isalnum('4'));
+	printf("      ------> Test with NULL <------\n");
+	printf(" Test return = %d \n", ft_isalnum(0));
+	printf(" ---------------------------------------------\n\n");
+}  
 
 void 	check_digit(void)
 {
@@ -32,71 +32,105 @@ void 	check_digit(void)
 	printf(" Is '%c' a number ? return = %d \n", '0', ft_isdigit('0'));
 	printf(" Is '%c' a number ? return = %d \n", '9', ft_isdigit('9'));
 	printf(" Is '%c' a number ? return = %d \n\n", '4', ft_isdigit('4'));
-	printf(" ------> Test with NULL <------\n");
+	printf("      ------> Test with NULL <------\n");
 	printf(" Return with NULL = %d \n\n", ft_isdigit(0));
-	printf("----------> END OF DIGIT <----------\n\n");
+	printf(" ---------------------------------------------\n\n");
 }
 
-/*void 	check_alpha(void)
+void 	check_alpha(void)
 {
-	printf("[-] ALPHA [-]\n");
-	printf("[+] Test on %c, return = %d [+]\n", 'a', ft_isalpha('a'));
-	printf("[+] Test on %c, return = %d [+]\n", 'z', ft_isalpha('z'));
-	printf("[+] Test on %c, return = %d [+]\n", '*', ft_isalpha('*'));
-	printf("[+] Test on %c, return = %d [+]\n", 'Z', ft_isalpha('Z'));
-	printf("[+] Test on %c, return = %d [+]\n", 'A', ft_isalpha('A'));
-	printf("[+] Test on %c, return = %d [+]\n", '0', ft_isalpha('0'));
-	printf("[+] Test on %c, return = %d [+]\n", '9', ft_isalpha('9'));
-	printf("[+] Test on %c, return = %d [+]\n", '4', ft_isalpha('4'));
-	printf("[-] Test with NULL [-]\n");
-	printf("[+] Test return = %d [+]\n", ft_isalpha(0));
-	printf("[-] END OF ALPHA [-]\n");
+	printf(" ----------------> ISALPHA <----------------\n\n");
+	printf(" Is '%c' a character ? return = %d \n", 'a', ft_isalpha('a'));
+	printf(" Is '%c' a character ? return = %d \n", 'z', ft_isalpha('z'));
+	printf(" Is '%c' a character ? return = %d \n", '*', ft_isalpha('*'));
+	printf(" Is '%c' a character ? return = %d \n", 'Z', ft_isalpha('Z'));
+	printf(" Is '%c' a character ? return = %d \n", 'A', ft_isalpha('A'));
+	printf(" Is '%c' a character ? return = %d \n", '0', ft_isalpha('0'));
+	printf(" Is '%c' a character ? return = %d \n", '9', ft_isalpha('9'));
+	printf(" Is '%c' a character ? return = %d \n\n", '4', ft_isalpha('4'));
+	printf("      ------> Test with NULL <------\n");
+	printf(" Test return = %d \n", ft_isalpha(0));
+	printf(" ---------------------------------------------\n\n");
 }
 
 void 	check_tolower(void)
 {
-	printf("[-] TOLOWER [-]\n");
-	printf("[+] Test on %c, return = %c [+]\n", 'a', ft_tolower('a'));
-	printf("[+] Test on %c, return = %c [+]\n", 'z', ft_tolower('z'));
-	printf("[+] Test on %c, return = %c [+]\n", '*', ft_tolower('*'));
-	printf("[+] Test on %c, return = %c [+]\n", 'Z', ft_tolower('Z'));
-	printf("[+] Test on %c, return = %c [+]\n", 'A', ft_tolower('A'));
-	printf("[+] Test on %c, return = %c [+]\n", '0', ft_tolower('0'));
-	printf("[+] Test on %c, return = %c [+]\n", '9', ft_tolower('9'));
-	printf("[+] Test on %c, return = %c [+]\n", '4', ft_tolower('4'));
-	printf("[-] Test with NULL [-]\n");
-	printf("[+] Test return = %c [+]\n", ft_tolower(0));
-	printf("[-] END OF TOLOWER [-]\n");
+	printf(" ----------------> TOLOWER <----------------\n\n");
+	printf(" Test on %c, return = %c \n", 'a', ft_tolower('a'));
+	printf(" Test on %c, return = %c \n", 'z', ft_tolower('z'));
+	printf(" Test on %c, return = %c \n", '*', ft_tolower('*'));
+	printf(" Test on %c, return = %c \n", 'Z', ft_tolower('Z'));
+	printf(" Test on %c, return = %c \n", 'A', ft_tolower('A'));
+	printf(" Test on %c, return = %c \n", '0', ft_tolower('0'));
+	printf(" Test on %c, return = %c \n", '9', ft_tolower('9'));
+	printf(" Test on %c, return = %c \n\n", '4', ft_tolower('4'));
+	printf("      ------> Test with NULL <------\n");
+	printf(" Test return = %c \n", ft_tolower(0));
+	printf(" ---------------------------------------------\n\n");
 }
 
 void 	check_toupper(void)
 {
-	printf("[-] TOUPPER [-]\n");
-	printf("[+] Test on %c, return = %c [+]\n", 'a', ft_toupper('a'));
-	printf("[+] Test on %c, return = %c [+]\n", 'z', ft_toupper('z'));
-	printf("[+] Test on %c, return = %c [+]\n", '*', ft_toupper('*'));
-	printf("[+] Test on %c, return = %c [+]\n", 'Z', ft_toupper('Z'));
-	printf("[+] Test on %c, return = %c [+]\n", 'A', ft_toupper('A'));
-	printf("[+] Test on %c, return = %c [+]\n", '0', ft_toupper('0'));
-	printf("[+] Test on %c, return = %c [+]\n", '9', ft_toupper('9'));
-	printf("[+] Test on %c, return = %c [+]\n", '4', ft_toupper('4'));
-	printf("[-] Test with NULL [-]\n");
-	printf("[+] Test return = %c [+]\n", ft_toupper(0));
-	printf("[-] END OF TOUPPER [-]\n");
+	printf(" ----------------> TOUPPER <----------------\n\n");
+	printf(" Test on %c, return = %c \n", 'a', ft_toupper('a'));
+	printf(" Test on %c, return = %c \n", 'z', ft_toupper('z'));
+	printf(" Test on %c, return = %c \n", '*', ft_toupper('*'));
+	printf(" Test on %c, return = %c \n", 'Z', ft_toupper('Z'));
+	printf(" Test on %c, return = %c \n", 'A', ft_toupper('A'));
+	printf(" Test on %c, return = %c \n", '0', ft_toupper('0'));
+	printf(" Test on %c, return = %c \n", '9', ft_toupper('9'));
+	printf(" Test on %c, return = %c \n\n", '4', ft_toupper('4'));
+	printf("      ------> Test with NULL <------\n");
+	printf(" Test return = %c \n", ft_toupper(0));
+	printf(" ---------------------------------------------\n\n");
 }
 
 void 	check_isascii(void)
 {
-	printf("[-] ISASCII [-]\n");
-	printf("[+] Test on %c : %d, return = %d [+]\n", 'a', 'a', ft_isascii('a'));
-	printf("[+] Test on %c : %d, return = %d [+]\n", 'z', 'z', ft_isascii('z'));
-	printf("[+] Test on %c : %d, return = %d [+]\n", 'A', 'A', ft_isascii('A'));
-	printf("[+] Test on %c : %d, return = %d [+]\n", 'Z', 'Z', ft_isascii('Z'));
-	printf("[+] Test on %c : %d, return = %d [+]\n", 245, 245, ft_isascii(245));
-	printf("[+] Test on %c : %d, return = %d [+]\n", 221, 221, ft_isascii(221));
-	printf("[-] Test with NULL [-]\n");
-	printf("[+] Test return = %d [+]\n", ft_isascii(0));
-	printf("[-] END OF ISASCII [-]\n");
+	printf(" ----------------> ISASCII <----------------\n\n");
+	printf(" Is '%c' : '%d' an ASCII ? return = %d \n", 'a', 'a', ft_isascii('a'));
+	printf(" Is '%c' : '%d' an ASCII ? return = %d \n", 'z', 'z', ft_isascii('z'));
+	printf(" Is '%c' : '%d' an ASCII ? return = %d \n", 'A', 'A', ft_isascii('A'));
+	printf(" Is '%c' : '%d' an ASCII ? return = %d \n", 'Z', 'Z', ft_isascii('Z'));
+	printf(" Is '%c' : '%d' an ASCII ? return = %d \n", 245, 245, ft_isascii(245));
+	printf(" Is '%c' : '%d' an ASCII ? return = %d \n", 221, 221, ft_isascii(221));
+	printf(" Is '%c' : '%d' an ASCII ? return = %d \n", -21, -21, ft_isascii(-21));
+	printf("      ------> Test with NULL <------\n");
+	printf(" Test return = %d \n", ft_isascii(0));
+	printf(" ---------------------------------------------\n\n");
+}
+
+void 	check_isprint(void)
+{
+	printf(" ----------------> ISASCII <----------------\n\n");
+	printf(" Is '%c' : '%d' printable ? return = %d \n", 'a', 'a', ft_isprint('a'));
+	printf(" Is '%c' : '%d' printable ? return = %d \n", 'z', 'z', ft_isprint('z'));
+	printf(" Is '%c' : '%d' printable ? return = %d \n", 'A', 'A', ft_isprint('A'));
+	printf(" Is '%c' : '%d' printable ? return = %d \n", 'Z', 'Z', ft_isprint('Z'));
+	printf(" Is '%c' : '%d' printable ? return = %d \n", 9, 9, ft_isprint(9));
+	printf(" Is '%c' : '%d' printable ? return = %d \n", 28, 28, ft_isprint(28));
+	printf(" Is '%c' : '%d' printable ? return = %d \n", 127, 127, ft_isprint(127));
+	printf("      ------> Test with NULL <------\n");
+	printf(" Test return = %d \n", ft_isprint(0));
+	printf(" ---------------------------------------------\n\n");
+}
+
+void	check_strlen(void)
+{
+	char *str1 = "salut!";
+	char *str2 = "comment ca va ?";
+	char *str3 = "Je veux et j'exige, d'exquises excuses !";
+	char *str4 = "Yo!";
+	char *str5 = "SAPERLIPOPETE 123456789 ca maaaaaaaaaarche !!";
+	char *str6 = "qwertyuiopasdfghjklzxcvbnm";
+	printf(" ----------------> STRLEN <----------------\n\n");
+	printf(" Length of '%s' is '%zu'\n", str1, ft_strlen(str1));
+	printf(" Length of '%s' is '%zu'\n", str2, ft_strlen(str2));
+	printf(" Length of '%s' is '%zu'\n", str3, ft_strlen(str3));
+	printf(" Length of '%s' is '%zu'\n", str4, ft_strlen(str4));
+	printf(" Length of '%s' is '%zu'\n", str5, ft_strlen(str5));
+	printf(" Length of '%s' is '%zu'\n\n", str6, ft_strlen(str6));
+	printf(" ---------------------------------------------\n\n");
 }
 
 void 	check_bzero(void)
@@ -116,7 +150,7 @@ void 	check_bzero(void)
 	ft_bzero(NULL, 0);
 	printf("[-] END OF BZERO [-]\n");
 }
-
+/*
 void 	check_strlen(void)
 {
 	char str[5] = "abcd";
@@ -260,10 +294,9 @@ void 	check_b(void)
 
 int main(void)
 {
-//	   ft_nebre();
 	   check_digit();
 	   	printf("\n");
-/*	   check_alpha();
+	   check_alpha();
 	   	printf("\n");
 	   check_alnum();
 	   	printf("\n");
@@ -271,12 +304,16 @@ int main(void)
 	   	printf("\n");
 	   check_toupper();
 	   	printf("\n");
-	   check_puts();
+	/* check_puts();
 	    printf("\n");
-	   check_isascii();
+	*/ check_isascii();
 	   	printf("\n");
+	   check_isprint();
+	   	printf("\n");
+	   check_strlen();
+	    printf("\n");
 	   check_bzero();
-	   	printf("\n");
+	   	printf("\n");/*
 	   check_memalloc();
 	   	printf("\n");
 	   check_strlen();

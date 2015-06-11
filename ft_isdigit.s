@@ -1,12 +1,5 @@
 section .text
-	global start
 	global _ft_isdigit
-	global exit
-	global isdigit
-
-start:
-	call _ft_isdigit
-	ret
 
 _ft_isdigit:
 	mov	rax, 0				;initialize return --> 0
