@@ -5,6 +5,7 @@ HEADER
 
 #include "libfts.h"
 
+/*
 void 	check_alnum(void)
 {
 	printf(" ----------------> ISALNUM <---------------- \n\n");
@@ -150,29 +151,15 @@ void 	check_bzero(void)
 	ft_bzero(NULL, 0);
 	printf("[-] END OF BZERO [-]\n");
 }
-/*
-void 	check_strlen(void)
-{
-	char str[5] = "abcd";
-	char str2[3] = "op";
 
-	printf("[+] STRLEN [+]\n");
-	printf("[-] %s, sized: %d [-]\n", str, (int)ft_strlen(str));
-	printf("[-] %s, sized: %d [-]\n", str2, (int)ft_strlen(str2));
-
-	printf("[-] Test with NULL [-]\n");
-	printf("[-] sized: %d [-]\n", (int)ft_strlen(0));
-	printf("[+] END OF STRLEN [+]\n");
-}
+ 
 
 void 	check_puts(void)
-{
-	printf("[+] PUTS [+]\n");
-	ft_puts("[-] a [-]");
-	ft_puts("[-] $#@#',./,~!@~=+ [-]");
-	printf("[+] Test with null [+]\n");
-	ft_puts(NULL);
-	printf("[+] END OF PUTS [+]\n");
+{	
+	ft_puts("'Salut les petits gars !'");
+	puts("'Salut les petits gars !'");
+	ft_puts("aaa\n(null)\n");
+	puts("aaa\n(null)\n");
 }
 
 void 	check_memcpy(void)
@@ -226,27 +213,38 @@ void 	check_strcat(void)
 
 	str[0] = '\0';
 	printf("[+] STRCAT [+]\n");
-	printf("[-] Str init with empy char : %s [-]\n", ft_strcat(str, ""));
+	printf("[-] Str init with emtpy char : %s [-]\n", ft_strcat(str, ""));
 	printf("[-] Str: %s [-]\n", ft_strcat(str, "h"));
 	printf("[-] Str: %s [-]\n", ft_strcat(str, "ello"));
 	printf("[-] Str: %s [-]\n", ft_strcat(str, "!"));
 	printf("[+] END OF STRCAT [+]\n");
 }
-
+*/
 void 	check_cat(void)
 {
 	int fd;
-
+	printf(" \n\n----------------> FT_CAT <---------------- \n\n");
 	fd = open("auteur", O_RDONLY);
-	printf("[+] CAT [+]\n");
+	puts("\e[1;31m");
+	printf("File descriptor 0 (CTRL + D pout continuer)\n\n");
+	puts("\e[1;33m");
 	ft_cat(0); // Ctrl + D to Continue !
-	ft_cat(open(__FILE__, O_RDONLY));
+	puts("\e[1;31m");
+	printf("\n\nFichier 'ft_memcpy.s' :\n\n");
+	puts("\e[1;33m");
+	ft_cat(open("ft_memcpy.s", O_RDONLY));
+	puts("\e[1;31m");
+	printf("\n\nFichier auteur :\n\n");
+	puts("\e[1;33m");
 	ft_cat(fd);
+	puts("\e[1;31m");
+	printf("\n\nFile descriptor incorrect :\n\n");
 	ft_cat(-42);
-	printf("[+] END OF CAT [+]\n");
+	puts("\e[0m");
+	printf("\n\n ---------------------------------------------\n\n");
 	close(fd);
 }
-
+/*
 void		check_memalloc(void)
 {
 	char	*str;
@@ -294,7 +292,7 @@ void 	check_b(void)
 
 int main(void)
 {
-	   check_digit();
+	 /*  check_digit();
 	   	printf("\n");
 	   check_alpha();
 	   	printf("\n");
@@ -304,16 +302,16 @@ int main(void)
 	   	printf("\n");
 	   check_toupper();
 	   	printf("\n");
-	/* check_puts();
+	   check_puts();
 	    printf("\n");
-	*/ check_isascii();
+	   check_isascii();
 	   	printf("\n");
 	   check_isprint();
 	   	printf("\n");
 	   check_strlen();
 	    printf("\n");
 	   check_bzero();
-	   	printf("\n");/*
+	   	printf("\n");
 	   check_memalloc();
 	   	printf("\n");
 	   check_strlen();
@@ -325,10 +323,10 @@ int main(void)
 	   check_memcpy();
 	   	printf("\n");
 	   check_strcat();
-	   printf("\n");
+	   printf("\n"); 
 	   check_b();
 	   	printf("\n");  */
-	   // check_cat();
-	   // 	printf("\n");
+	   check_cat();
+	   //	printf("\n");  
 	return 0;
 }
